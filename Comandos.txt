@@ -1,0 +1,15 @@
+--Compilar el archivo ---
+make all
+
+--cargar modulo ------
+sudo insmod memory_201314565_201314891.ko
+
+--revisar mensaje de inserción ----
+dmesg
+
+--Archivo creado en proc ----
+cd /proc/
+cat memory_201314565_201314891
+
+--Descargar modulo --------
+rmmod memory_201314565_201314891
