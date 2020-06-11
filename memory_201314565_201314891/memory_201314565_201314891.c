@@ -1,7 +1,7 @@
 #include <linux/proc_fs.h>
 #include <linux/seq_file.h> 
-#include <asm/uaccess.h> 
 #include <linux/hugetlb.h>
+#include <asm/uaccess.h> 
 #include <linux/module.h>
 #include <linux/init.h>
 #include <linux/kernel.h>   

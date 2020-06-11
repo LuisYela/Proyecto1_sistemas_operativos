@@ -1,7 +1,7 @@
 --Compilar el archivo ---
 make all
 
---cargar modulo ------
+--cargar modulo de kernel ------
 sudo insmod memory_201314565_201314891.ko
 
 --revisar mensaje de inserción ----
@@ -11,5 +11,5 @@ dmesg
 cd /proc/
 cat memory_201314565_201314891
 
---Descargar modulo --------
+--Descargar modulo de kernle --------
 rmmod memory_201314565_201314891
