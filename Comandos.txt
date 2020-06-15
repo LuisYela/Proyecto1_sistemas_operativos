@@ -2,14 +2,15 @@
 make all
 
 --cargar modulo de kernel ------
-sudo insmod memory_201314565_201314891.ko
+sudo insmod memo_201314565_201314891.ko
 
 --revisar mensaje de inserción ----
 dmesg
 
 --Archivo creado en proc ----
 cd /proc/
-cat memory_201314565_201314891
+cat memo_201314565_201314891
 
 --Descargar modulo de kernle --------
 rmmod memory_201314565_201314891
+https://cboard.cprogramming.com/linux-programming/176318-kernel-module-list-all-processes-process-information.html

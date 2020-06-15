@@ -23,7 +23,7 @@ static int crear_archivo(struct seq_file * archivo, void *v) {
     seq_printf(archivo, "  Danilo Urias Coc  | Luis Javier Yela  \n");
     seq_printf(archivo, "  Memoria Total: \t %8lu KB - %8lu MB\n",total_memo, total_memo / 1024);
     seq_printf(archivo, "  Memoria Libre: \t %8lu KB - %8lu MB \n", free_memo, free_memo / 1024);
-    seq_printf(archivo, "  Porcentaje de memoria en uso: \t %8lu %%\n", (free_memo * 100)/ total_memo) ;
+    seq_printf(archivo, "  Porcentaje de memoria en uso: \t %8lu %%\n", ((total_memo-free_memo) * 100)/ total_memo) ;
     return 0;
 }
 
@@ -39,14 +39,14 @@ static struct file_operations operaciones_archivos =
 
 static int al_cargar(void)
 {
-    proc_create("memory_201314565_201314891", 0, NULL, &operaciones_archivos);
+    proc_create("memo_201314565_201314891", 0, NULL, &operaciones_archivos);
     printk(KERN_INFO "Carnet: 201314565 | 201314891\n");
     return 0;
 }
  
 static void al_descargar(void)
 {
-    remove_proc_entry("memory_201314565_201314891", NULL);
+    remove_proc_entry("memo_201314565_201314891", NULL);
     printk(KERN_INFO "Curso: Sistemas Operativos 1 Seccion:N\n");
 }
  

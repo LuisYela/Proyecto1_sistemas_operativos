@@ -1,4 +1,4 @@
-obj-m += memory_201314565_201314891.o
+obj-m += memo_201314565_201314891.o
 KDIR ?= /lib/modules/$(shell uname -r)/build
 
 all:
