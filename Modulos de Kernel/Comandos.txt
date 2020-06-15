@@ -11,6 +11,23 @@ dmesg
 cd /proc/
 cat memo_201314565_201314891
 
---Descargar modulo de kernle --------
-rmmod memory_201314565_201314891
-https://cboard.cprogramming.com/linux-programming/176318-kernel-module-list-all-processes-process-information.html
+--Descargar modulo de kernel --------
+rmmod memo_201314565_201314891
+
+/////////////// MODULO CPU ///////////////////////////
+
+--Compilar el archivo ---
+make all
+
+--cargar modulo de kernel ------
+sudo insmod cpu_201314565_201314891.ko
+
+--revisar mensaje de inserción ----
+dmesg
+
+--Archivo creado en proc ----
+cd /proc/
+cat cpu_201314565_201314891
+
+--Descargar modulo de kernel --------
+rmmod cpu_201314565_201314891
